@@ -9,8 +9,8 @@ class RandomBase(BaseNode):
 class RandomFloat(RandomBase):
     RETURN_NAMES = ("random_float",)
     REQUIRED = { 
-                "minimum": ("FLOAT", {"default": 0.0}), 
-                "maximum": ("FLOAT", {"default": 1.0}), 
+                "minimum": ("FLOAT", {"default": 0.0,"step":0.0001}), 
+                "maximum": ("FLOAT", {"default": 1.0,"step":0.0001}), 
                 "seed": SEED_INPUT(),
     }
     OPTIONAL = { "decimal_places": ("INT", {"default": 10, "min":1, "max":20}), }
